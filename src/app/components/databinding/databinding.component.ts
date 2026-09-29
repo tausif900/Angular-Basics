@@ -4,8 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-databinding',
   imports: [],
   templateUrl: './databinding.component.html',
-  styleUrl: './databinding.component.css'
+  styleUrl: './databinding.component.css',
 })
 export class DatabindingComponent {
-
+  name = 'Tausif';
+  age = 22;
 }
