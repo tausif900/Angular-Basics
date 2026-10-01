@@ -35,13 +35,26 @@
   </ng-template>
 
 
-  <ul class="list-group w-25">
-    <li class="list-group-item" *ngFor="let n of names">{{n}}</li>
+  <ul class="list-group w-25 mb-2">
+    <li class="list-group-item" *ngFor="let n of names;first as f;last as l;index as idx">{{n}} {{idx}}
+      <span class="badge bg-primary" *ngIf="f">New</span>
+    </li>
   </ul>
 
+  <div class="row">
+
+    <div class="col-lg-3 mb-2" *ngFor="let s of students">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <h4 class="card-title text-center">{{s.name}}</h4>
+          <p class="card-text text-center">{{s.age}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <hr>
-
-
 
   <li>Architectural Directives [ngStyle,ngClass]</li>
 </ul>
