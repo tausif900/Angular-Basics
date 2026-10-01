@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 export class DatabindingComponent {
   name = 'Tausif';
   age = 22;
+  color = 'red';
+
+  onButtonClick() {
+    alert('button Clicked');
+  }
 }

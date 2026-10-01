@@ -12,8 +12,12 @@
     <div>
       <input type="text" [value]="name">
     </div>
+
     <li>Event binding</li>
+    <button class="btn btn-primary" (click)="onButtonClick()">Click</button>
+
     <li>Style binding</li>
+    <h4 [style.color]="color">Hello</h4>
   </ul>
 
   <hr>
