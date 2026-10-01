@@ -18,6 +18,10 @@
 
     <li>Style binding</li>
     <h4 [style.color]="color">Hello</h4>
+    <button class="btn btn-danger m-2" (click)="changeColor('red')">Red</button>
+    <button class="btn btn-success m-2" (click)="changeColor('green')">Green</button>
+    <button class="btn btn-primary m-2" (click)="changeColor('blue')">Blue</button>
+
   </ul>
 
   <hr>
@@ -25,5 +29,6 @@
   <li>Two way data binding</li>
   <ul>
     <li>ngModel</li>
+    <input type="text" [(ngModel)]="name">
   </ul>
 </ul>

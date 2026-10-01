@@ -1,0 +1,47 @@
+<ul>
+  <li>Component</li>
+  <hr>
+
+  <li>Structural Directives (ngIf,ngFor)</li>
+  <h2>Example 1</h2>
+  <div class="card text-white bg-primary w-25 mb-2" *ngIf="loggedIn">
+    <div class="card-body">
+      <h4 class="card-title">Profile Card</h4>
+      <p class="card-text">My Profile</p>
+    </div>
+  </div>
+  <button class="btn btn-success" (click)="toggleLogin()">Click to Login/Logout</button>
+
+  <h2>Example 2</h2>
+
+  <ng-container *ngIf="loggedIn;then ifblock else elseblock"></ng-container>
+
+  <ng-template #ifblock>
+    <div class="card text-white bg-primary w-25 mb-2">
+      <div class="card-body">
+        <h4 class="card-title text-center">Welcome Card</h4>
+        <p class="card-text text-center">Welcome</p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #elseblock>
+    <div class="card text-white bg-primary w-25 mb-2">
+      <div class="card-body">
+        <h4 class="card-title text-center">Else block</h4>
+        <p class="card-text text-center">else block</p>
+      </div>
+    </div>
+  </ng-template>
+
+
+  <ul class="list-group w-25">
+    <li class="list-group-item" *ngFor="let n of names">{{n}}</li>
+  </ul>
+
+  <hr>
+
+
+
+  <li>Architectural Directives [ngStyle,ngClass]</li>
+</ul>
